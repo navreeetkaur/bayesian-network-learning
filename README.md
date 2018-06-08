@@ -1,5 +1,5 @@
 # Bayesian Network Parameter Learning
-## Course Project: COL884(Spring'18): Uncertainity in AI
+### Course Project - COL884(Spring'18):Uncertainity in AI
 #### Creator: Navreet Kaur[2015TT10917]
 
 #### Objective: 
@@ -37,7 +37,6 @@ Here the first row says that X=True, Y=False and Z=True. The second row says tha
 Overall your input will be alarm.bif with most probability values -1 and this datafile. The datafile will have about 10,000 patient records.
 #### Output format:
 Output will be the result of learning each probability value in the conditional probability tables. In other words, all -1s are replaced with a probability value upto four decimal places. Thus, the output is a complete alarm.bif network.
-
 #### Files:
 1) records.dat:
 	A Dataset file where a single line is a single patient record and each variable in the record is separated by spaces. The unknown record is marked by “?”. Each line contains at max 1 missing record. The file contains more than 11000 records.
@@ -69,7 +68,6 @@ Output will be the result of learning each probability value in the conditional 
 		Expectation_Maximisation
 		parse_output
 7) main.py: main file that calls methods from bayesnet and utils to build a bayes net, read data and learn its parameters
-
 #### Assumptions:
 • All variables are missing completely(or unconditionally) at random(MCAR) and none of them are either missing at random(MAR) or missing systematically or hidden i.e. initially, probability of each missing value is the same and the sample mean of variable v is unbiased estimator of true value of v
 #### Parameter Initialisation:
@@ -88,7 +86,6 @@ Output will be the result of learning each probability value in the conditional 
 	• Pandas DataFrames to store CPT
 4. CPTs
 	• All CPTs are represented by Pandas DataFrames(columns are names of variables and column ‘p’ for probability value) so as to easily access the entries by specifying a dictionary of ‘Evidence’ with keys as variable names and values as the integers
-
 #### Optimisation/Techniques:
 • Storage of only counts and not probabilities in all the CPTs and normalising them before performing Expectation step
 • **Smoothing**: Since all possible instances might not be observed due to small size of dataset as compared to number of network nodes, counts of all possible instances in the CPTs were set to one to initialise with. Similarly, in the Maximisation step, with any observed count was equal to zero, it was set to 0.00005 (since required precision of probabilities is upto 4 decimal places and counts in maximisation might be less than one due to weights of data points being considered, which itself lie between 0 and 1) 
