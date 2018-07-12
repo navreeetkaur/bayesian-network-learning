@@ -3,11 +3,11 @@
 #### Creator: Navreet Kaur[2015TT10917]
 
 #### Objective: 
-Bayesian Parameter Learning of Alarm Bayesian Net given data with at most one missing value in each row
+Bayesian Parameter Learning of Alarm Bayesian Net given data with at most one missing value in each row.
 #### Algorithm Used: 
 Expectation-Maximisation
 #### Goal: 
-The goal of this assignment is to get experience with learning of Bayesian Networks and understanding their value in the real world 
+The goal of this assignment is to get experience with learning of Bayesian Networks and understanding their value in the real world. 
 #### Scenario: 
 Medical diagnosis. Some medical researchers have created a Bayesian network that models the inter-relationship between (some) diseases and observed symptoms. Our job as computer scientists is to learn parameters for the network based on health records. Unfortunately, as it happens in the real world, certain records have missing values. We need to do our best to compute the parameters for the network, so that it can be used for diagnosis later on.
 #### Problem Statement: 
